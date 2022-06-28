@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_button_padding">18dp</dimen>
+    <dimen name="vertical_padding">6dp</dimen>
+    <dimen name="tv_margin_horizontal">36dp</dimen>
+    <dimen name="big_text_size">80sp</dimen>
+    <dimen name="big_button_width">178dp</dimen>
+    <dimen name="big_button_padding_start">32dp</dimen>
+    <dimen name="big_button_padding_end">0dp</dimen>
+
+</resources>
