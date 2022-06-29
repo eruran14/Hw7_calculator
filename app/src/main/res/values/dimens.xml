@@ -7,5 +7,13 @@
     <dimen name="big_button_width">178dp</dimen>
     <dimen name="big_button_padding_start">32dp</dimen>
     <dimen name="big_button_padding_end">0dp</dimen>
+    <dimen name="medium_text_size">30sp</dimen>
+    <dimen name="tv_margin_top">70dp</dimen>
+    <dimen name="iv_mg_start">180dp</dimen>
+    <dimen name="iv_margin_top">10dp</dimen>
+    <dimen name="tv2_margin_top">50dp</dimen>
+    <dimen name="pink_button_mg_horizontal">80dp</dimen>
+    <dimen name="btn_padding_horizontal">15dp</dimen>
+    <dimen name="btn_corner_radius">20dp</dimen>
 
 </resources>

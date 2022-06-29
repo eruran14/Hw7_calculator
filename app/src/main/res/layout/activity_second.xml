@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/milky"
+    tools:context=".SecondActivity">
+
+
+
+    <TextView
+        android:id="@+id/tv_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/dark_gray"
+        android:paddingHorizontal="@dimen/vertical_padding"
+        app:drawableLeftCompat="@drawable/ic_baseline_menu_24"
+        app:drawableRightCompat="@drawable/ic_baseline_search_24"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_toys_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="@dimen/iv_mg_start"
+        android:layout_marginTop="@dimen/iv_margin_top"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/default_button_padding"
+        >
+
+        <TextView
+            android:layout_marginTop="@dimen/tv_margin_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/policies"
+            android:textAlignment="center"
+            android:textSize="@dimen/medium_text_size"
+            android:textColor="@color/dark_gray"
+            android:textStyle="bold"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/SecondActivity.Button"
+            android:text="@string/policy"
+            android:layout_marginTop="@dimen/default_button_padding"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/SecondActivity.Button"
+            android:text="@string/product_category"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/SecondActivity.Button"
+            android:text="@string/origin_country"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/SecondActivity.Button"
+            android:text="@string/brand"
+            />
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_marginTop="@dimen/tv2_margin_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/current_policies"
+            android:textAlignment="center"
+            android:textSize="@dimen/medium_text_size"
+            android:textColor="@color/dark_gray"
+            android:textStyle="bold"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pink_button"
+            android:layout_marginTop="@dimen/default_button_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/pink_button_mg_horizontal"
+            android:backgroundTint="@color/pink"
+            android:text="@string/export_as_csv"
+            android:textAllCaps="false"
+            android:paddingVertical="@dimen/btn_padding_horizontal"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

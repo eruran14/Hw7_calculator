@@ -2,9 +2,12 @@ package com.example.hw7;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,12 +16,22 @@ public class MainActivity extends AppCompatActivity {
     private Integer first, second;
     private Boolean isOperationClick;
     private String operation;
+    private Button nextActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.text_view);
+
+        nextActivity = findViewById(R.id.btn_next_activity);
+        nextActivity.setVisibility(View.INVISIBLE);
+        nextActivity.setOnClickListener(view -> {
+            String text = textView.getText().toString();
+            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            intent.putExtra("key1", text);
+            startActivity(intent);
+        });
     }
 
     public void onNumberClick(View view) {
@@ -57,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText("0");
                 first = 0;
                 second = 0;
+                if (nextActivity.getVisibility() == View.INVISIBLE){
+                    nextActivity.setVisibility(View.VISIBLE);
+                }
                 break;
         }
     }
@@ -98,6 +114,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
         }
         isOperationClick = true;
+        if (nextActivity.getVisibility() == View.INVISIBLE){
+            nextActivity.setVisibility(View.VISIBLE);
+        }
     }
 
 
@@ -114,6 +133,9 @@ public class MainActivity extends AppCompatActivity {
         }
         exceedLength();
         isOperationClick = false;
+        if(nextActivity.getVisibility() == View.VISIBLE){
+            nextActivity.setVisibility(View.INVISIBLE);
+        }
     }
 
     private void exceedLength() {

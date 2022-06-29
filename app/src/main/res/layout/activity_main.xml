@@ -13,6 +13,16 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
+        <Button
+            android:id="@+id/btn_next_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/orange"
+            android:text="@string/next_activity"
+            android:textColor="@color/milky"
+            />
+
         <TextView
             android:id="@+id/text_view"
             android:layout_marginHorizontal="@dimen/tv_margin_horizontal"
